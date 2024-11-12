@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    padding: 100px;
+}
+h1, p {
+    margin-bottom: 25px;
+}
+#open, #close {
+    background: skyblue;
+    border: 3px solid skyblue;
+    border-radius: 3px;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#mask {
+    background: rgb(84, 138, 160, 0.6);
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+#modal {
+    background: #fff;
+    max-width: 560px;
+    padding: 2rem;
+    border-radius: 3px;
+    position: absolute;
+    inset: 10rem 0 auto;
+    margin: auto;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+}
+#modal h1 {
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+}

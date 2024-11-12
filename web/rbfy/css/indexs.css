@@ -1,0 +1,448 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/*   font-family: "Nanum Myeongjo", serif; */
+
+body {
+    background: #F6F4ED;
+}
+/* skip_event */
+.skip_event {
+    position: fixed;
+    top: 0; left: 0;
+    background: #F6F4ED;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    line-height: 32px; /* height와 똑같은 값을주면 정렬 */
+}
+.skip_event button {
+    position: absolute;
+    top: 50%; right: 30px;
+    transform: translateY(-50%);
+    width: 26px; height: 26px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* header */
+header {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 0 4%;
+    box-sizing: border-box;
+    z-index: 5;
+}
+header .logo {
+    width: 200px; height: 60px;
+    margin: 20px auto;
+}
+header .logo > a {
+    display: block;
+    background: url(../img/ico_logo47.png)no-repeat center/contain;
+}
+header .btn_mobile {
+    position: absolute;
+    top: 25px; left: 4%;
+}
+header .btn_mobile span {
+    position: absolute;
+    top: 0; left: 0;
+    width: 36px;
+    height: 2px;
+    background: white;
+}
+header .btn_mobile > span:nth-child(2) {
+    top: 10px;
+}
+header .btn_mobile > span:nth-child(3) {
+    top: 20px;
+}
+
+
+/* sub_event */
+header .sub_event {
+    position: absolute;
+    top: 25px; left: 8%;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 26px;
+    color: white;
+}
+
+/* header-util_link */
+header .util_link {
+    position: absolute;
+    top: 25px; right: 4%;
+}
+header .util_link a {
+    display: inline-block;
+    width: 22px; height: auto;
+    margin-left: 30px;
+}
+header .util_link > a > img {
+    max-width: 100%;
+}
+
+/* swiper */
+#main_visual {
+    height: 90vh;
+    overflow: hidden;
+}
+
+#main_visual .swiper-slide {
+    height: 100%;
+    position: relative;
+}
+
+#main_visual .main_title a {
+    display: inline-block;
+    padding: 10px 50px;
+    margin-top: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+#main_visual .main_title a:hover {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+}
+
+/* section - 공통요소 */
+section + section {
+    padding: 120px 0;
+    text-align: center;
+}
+section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+section .main_title {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translatey(-50%);
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding: 50px 50px;
+    line-height: 1.4;
+    
+}
+section .main_title p {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+section .main_title p:nth-child(2) {
+    font-weight: 500;
+    font-size: 36px;
+    color: white;
+}
+
+section .text_area .p_title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 15px;
+}
+section .text_area .desc {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+section .text_area .price {
+    margin-bottom: 15px;
+}
+section .text_area .price del {
+    margin-right: 15px;
+    color: rgba(0,0,0,0.4);
+}
+section .text_area .price ins {
+    text-decoration: none;
+}
+section .text_area .rate_star svg {
+    vertical-align: -1px;
+}
+section ul li figure {
+    overflow: hidden;
+    height: 620px;
+    margin-bottom: 20px;
+}
+section ul li figure > img {
+    width: 100%;
+}
+
+
+
+
+/* section #sc_life */
+.sc_title .title {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+}
+.sc_title .text {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.sc_title .btn_view {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 120px;
+}
+.sc_title .btn_view::before {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 1px;
+    background: #111;
+    transition: all 0.2s;
+    content: '';
+}
+.sc_title .btn_view:hover:before {
+    width: 100%;
+}
+.sc_video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* sc_product */
+.product_list {
+    display: flex;
+    justify-content: space-between;    
+    width: 50%;
+    margin: 0 auto 30px;
+}
+.product_list > li {
+    width: calc(100%/4)
+}
+.product_list > li > a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: rgba(0,0,0,0.3);
+}
+.product_list > li.active > a {color: #000;}
+.product_wrap .text {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+/* tab_contents */
+.product_wrap > div > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.product_wrap > div > ul > li {
+    width: 31.5%;
+}
+.product_wrap > div > ul > li figure {
+    position: relative;
+}
+.product_wrap > div > ul > li figure:before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0;
+}
+.product_wrap > div > ul > li figure:after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 100px; height: 100px;
+    background: #313131 url(../img/ico_c.png) no-repeat center/30px;
+    opacity: 0;
+}
+.product_wrap > div > ul > li:hover figure:before {
+    opacity: 1;
+}
+.product_wrap > div > ul > li:hover figure:after {
+    opacity: 0.7;
+}
+/* tab */
+.product_wrap > div {display: none;}
+.product_wrap > div.active {display: block;}
+
+/* sc_visual */
+#sc_visual {
+    position: relative;
+    height: 300px;
+    background: url(../img/vs_bg_2.jpg) no-repeat center/cover;
+    text-align: left;
+    box-sizing: border-box;
+}
+#sc_visual .main_title {
+    position: absolute;  
+}
+
+/* review */
+#review .text {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+#review .review_list {
+    display: flex;
+    justify-content: space-evenly;
+}
+#review .review_list li {
+    width: 23.5%;
+}
+#review .review_list li figure {
+    height: 460px;
+}
+
+/* sns_area */
+#sns_area {
+    padding-top: 0;
+}
+#sns_area h2 {
+    font-size: 24px;
+}
+#sns_area h2 img {
+    width: 24px;
+    vertical-align: -3px;
+}
+#sns_area .insta_list {
+    display: flex;
+    justify-content: space-between;
+}
+#sns_area .insta_list > li {
+    width: calc(100%/5)
+}
+#sns_area .insta_list > li img {
+    width: 100%;
+}
+
+/* footer */
+footer {
+    padding: 100px 80px;
+    background:#313131;
+    box-sizing: border-box;
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255,255,255,0.3);
+}
+footer > div + div {margin-top: 50px;}
+footer > div img {
+    opacity: 0.2;
+}
+footer .f_cont01 > span > img {
+    width: 200px;
+}
+footer .f_cont01 .f_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+footer .f_cont01 .f_right .sns_icon > a {
+    display: inline-block;
+    margin: 0 10px;
+}
+footer .f_cont01 .f_right .sns_icon > a img {
+    width: 30px;
+    vertical-align: middle;
+}
+footer .f_cont01 .f_right .sns_icon > a:hover img {
+    opacity: 1;
+}
+footer .f_cont01 .f_right .family_site {
+    width: 140px;
+    margin-left: 30px;        
+}
+footer .f_cont01 .f_right .family_site > a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    border-radius: 3px 3px 0 0;    
+    border: 1px solid rgba(255,255,255,0.15);
+}
+footer .f_cont01 .f_right .family_site > span {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid rgba(0,0,0,0.15);
+    opacity: 0;
+}
+.on {
+    background: #fff!important; 
+    color:#585858 !important;
+    opacity: 1 !important;
+}
+
+footer .f_cont02 > div {
+    width: 22%;
+}
+footer .f_cont02 > div span {
+    display: block;
+    margin-bottom: 5px;
+}
+footer .f_cont02 > div > span {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+}
+footer .f_cont02 > div strong {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.841);
+    margin-bottom: 25px;
+}
+footer .f_cont02 .guide > a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer > .f_cont03  {    
+    display: block;
+    color: rgba(255, 255, 255, 0.6)
+}
+footer > .f_cont03 > p {
+    margin-bottom: 5px;
+}
+footer > .f_cont03 .copy {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+footer > .f_cont03 > p > a {
+    position: relative;
+    display: inline-block;
+}
+footer > .f_cont03 > p > a:first-child {padding-right: 16px;}
+footer > .f_cont03 > p > a + a {
+    padding: 0 16px;
+}
+footer > .f_cont03 > p > a + a:before {
+    content: '';
+    width: 1px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 4px; left: 0;
+
+}

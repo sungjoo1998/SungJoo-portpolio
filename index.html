@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio 박성주</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/m_index.css" media="screen and (max-width: 380px)">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <button id="menu_open" class="btn_menu">
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <title>메뉴 열기</title>
+                        <path clip-rule="evenodd" d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z" fill-rule="evenodd"/>
+                    </svg>
+                </button>
+        
+                <div id="menu_area">
+                    <button id="menu_close" class="btn_menu">
+                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <title>메뉴 닫기</title>
+                            <path clip-rule="evenodd" d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z" fill-rule="evenodd"/>
+                        </svg>
+                    </button>
+        
+                    <ul class="menu_list">
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#profile">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#design">DESIGN</a>
+                        </li>
+                        <li>
+                            <a href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="gnb_menu">
+                <ul>
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#profile">PROFILE</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#design">DESIGN</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="home">
+                <div class="home_content">
+                    <h1>
+                        안녕하세요. <br>
+                        웹 퍼블리셔 <span>박성주</span> 입니다.
+                    </h1>
+                    <p>
+                        WEB PORTFOLIO
+                    </p>
+                </div>
+            </div>    
+        </header>
+
+        <section>
+            <!-- profile -->
+            <div id="profile">
+                <h2>PROFILE</h2>
+                <div class="profile_content fadeIn">
+                    <ul class="profile_area">
+                        <li>
+                            <figure></figure>
+                        </li>
+                        <li>
+                            <h3>PROFILE</h3>
+                        </li>
+                        <li>
+                            이름
+                            <span>박성주</span>
+                        </li>
+                        <li>
+                            생년월일
+                            <span>1998.04.23</span>
+                        </li>
+                        <li>
+                            연락처
+                            <span>010-9890-4126</span>
+                        </li>
+                        <li>
+                            이메일
+                            <span>joo4126@gmail.com</span>
+                        </li>
+                    </ul>
+                    <ul class="about_area">   
+                        <li>
+                            <h3>ABOUT ME</h3>
+                        </li> 
+                        <li>
+                            <p>
+                                화려하지는 않지만 소박하고 아름다움이 어우러지는 신입 웹퍼블리셔 박성주입니다. <br>
+                                바쁨속에서 여유를 가지며 조화롭고 배우며 성장하는 퍼블리셔가 되겠습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Education</strong>
+                            <span>2024.10 스마트UI/UX디자인 & 웹퍼블리셔 양성과정 수료</span>
+                            <span>2023.02 명지전문대학교 산업경영공학과 졸업</span>
+                            <span>2017.02 영등포 공업 고등학교 금형디자인과 졸업</span>
+                        </li>
+                        <li>
+                            <strong>Certification</strong>
+                            <span>2016.11 CNC선반 취득</span>
+                            <span>2016.09 CNC밀링 취득</span>
+                            <span>2015.07 SOLIDWORKS 취득</span>
+                        </li>
+                        <li>
+                            <strong>Career</strong>
+                            <span>2021.02 ~ 2024.05 삼영기업 (전기기능공)</span>
+                            <span>2016.09 ~ 2017.09 승현정밀 (특수금형 가공)</span>
+                        </li>
+                        <li>
+                            <strong>SKILLS</strong>
+                            <span>AI/PS</span>
+                            <span>HTML/CSS</span>
+                            <span>JQUERY/JAVASCRIPT</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- portfolio -->
+            <div id="portfolio">
+                <h2>PORTFOLIO</h2>
+                <div class="portfolio_content fadeIn">
+                    <ul>
+                        <li>
+                            <a href="web/tvn/" target="_blank">
+                                <img src="img/tvn.png" alt="tvn화면">
+                            </a>
+                            <h3>
+                               tvn 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </li>
+                        <li>
+                            <a href="web/websso/" target="_blank">
+                                <img src="img/websso.png" alt="websso화면">
+                            </a>
+                            <h3>
+                                WEBSSO 창작 반응형 사이트 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                        <li>
+                            <a href="web/richmond/" target="_blank">
+                                <img src="img/therichmond.png" alt="richmond화면">
+                            </a>
+                            <h3>
+                                richmond 호텔 홈페이지 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                        <li>
+                            <a href="web/KirinIchiban/" target="_blank">
+                                <img src="img/kirin.png" alt="KirinIchiban화면">
+                            </a>
+                            <h3>
+                                KirinIchiban 반응형 홈페이지 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                        <li>
+                            <a href="web/cafe/cafe.html" target="_blank">
+                                <img src="img/cafe.png" alt="cafe화면">
+                            </a>
+                            <h3>
+                                WINNING CAFE 반응형 페이지 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                        <li>
+                            <a href="web/rbfy/index.html" target="_blank">
+                                <img src="img/rbfy.png" alt="rbfy화면">
+                            </a>
+                            <h3>
+                                rbfy 화장품 홈페이지 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                        <li>
+                            <a href="web/fashion/index.html" target="_blank">
+                                <img src="img/fashion.png" alt="쇼핑화면">
+                            </a>
+                            <h3>
+                                패션 디자인 관련 홈페이지 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                        <li>
+                            <a href="web/timer/index.html" target="_blank">
+                                <img src="img/timer.png" alt="시간화면">
+                            </a>
+                            <h3>
+                                시간별 달라지는 홈페이지 
+                             </h3>
+                             <h4>
+                                 WEB | 디자인 · 퍼블리싱
+                             </h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m_portfolio_content fadeIn">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="web/websso/" target="_blank">
+                                <img src="img/websso.png" alt="websso화면">
+                            </a>
+                            <h3>
+                                WEBSSO 창작 반응형 사이트 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/tvn/" target="_blank">
+                                <img src="img/tvn.png" alt="tvn화면">
+                            </a>
+                            <h3>
+                                tvn 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/richmond/" target="_blank">
+                                <img src="img/therichmond.png" alt="richmond화면">
+                            </a>
+                            <h3>
+                                richmond 호텔 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/KirinIchiban/" target="_blank">
+                                <img src="img/kirin.png" alt="KirinIchiban화면">
+                            </a>
+                            <h3>
+                                KirinIchiban 반응형 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/cafe/cafe.html" target="_blank">
+                                <img src="img/cafe.png" alt="cafe화면">
+                            </a>
+                            <h3>
+                                WINNING CAFE 반응형 페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/rbfy/index.html" target="_blank">
+                                <img src="img/rbfy.png" alt="rbfy화면">
+                            </a>
+                            <h3>
+                                rbfy 화장품 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/fashion/index.html" target="_blank">
+                                <img src="img/fashion.png" alt="쇼핑화면">
+                            </a>
+                            <h3>
+                                패션 디자인 관련 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="web/timer/index.html" target="_blank">
+                                <img src="img/timer.png" alt="시간화면">
+                            </a>
+                            <h3>
+                                시간별 달라지는 홈페이지 
+                            </h3>
+                            <h4>
+                                WEB | 디자인 · 퍼블리싱
+                            </h4>
+                        </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            
+               
+            <!-- design -->
+            <div id="design">
+                <h2>DESIGN</h2>
+                <div class="design_area fadeIn">
+                    <div class="design_img">
+                        <img src="design/shopping/shoppingmall.png" alt="한복쇼핑몰">
+                    </div>
+                    <div class="design_concept wrapper">
+                        <ul class="design_thumbnails">
+                            <li class="fadeIn"><img src="design/ps/hanbok.png" alt="한복"></li>
+                            <li class="fadeIn"><img src="design/ps/hanok.png" alt="한옥"></li>
+                            <li class="fadeIn"><img src="design/ps/sky.png" alt="하늘"></li>
+                            <li class="fadeIn"><img src="design/ps/book.png" alt="간식북커버"></li>
+                            <li class="fadeIn"><img src="design/shopping/shoppingmall.png" alt="한복쇼핑몰"></li>
+                            <li class="fadeIn"><img src="design/shopping/spm_sub.png" alt="한복쇼핑몰 서브페이지"></li>
+                            <li class="fadeIn"><img src="design/shopping/shoppingmall_mobile.png" alt="한복쇼핑몰"></li>
+                            <li class="fadeIn"><img src="design/shopping/spm_m_sub.png" alt="한복쇼핑몰"></li>
+                            <li class="fadeIn"><img src="design/ps/travel.png" alt="여행"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- contact -->
+            <div id="contact">
+                <h2>CONTACT</h2>
+                <div class="contact_content fadeIn">
+                    <div class="contact_img">
+                        <img src="img/profile04.png" alt="박성주 프로필">
+                    </div>
+                    <div class="contact_text">
+                        <h3>준비되어있는 웹퍼블리셔 박성주입니다.</h3>
+                        <p>
+                            사용자에게 편리하고 아름다운 웹 경험을 제공하는 것입니다. <br>
+                            디자인과 기술의 조화를 이루어, 누구나 쉽게 접근할 수 있는 콘텐츠를 만드는 것이 목표입니다. <br>
+                            <br>
+                            시간 내어 제 포토폴리오를 봐 주셔서 감사합니다. <br>
+                        </p>
+                        <span><img src="img/mail.png" alt="이메일">joo4126@gmail.com</span>
+                        <span><img src="img/call.png" alt="전화">010-9890-4126</span>
+                    </div>
+                </div>
+                <p>
+                    Copyright ⓒ 2024 ParkSungJoo All right reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

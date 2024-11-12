@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url('http://fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+body {
+    font-family: "Jeju Gothic", sans-serif;
+    position: relative;
+    height: 100vh;
+}
+
+:root {
+    --gold: #f69f00;
+    --black: #000;
+    --orange: #fcc704;
+    --white: white;
+}
+.bg-black {
+    background: #000;
+}
+
+/* loading */
+.loading {
+    height: 100vh;
+}
+.loading .d-flex img {
+    width: 300px;
+    position: absolute;
+    top: 50%; 
+    margin-top: -50px
+}
+
+/* 캐러셀 이미지 사이즈 수정 */
+#topCarousel {overflow: hidden;}
+#topCarousel .carousel-item:nth-of-type(1) {
+    background: url(../img/carousel_01.jpg) no-repeat center/cover;
+    height: calc(100vh - 66px);
+}
+#topCarousel .carousel-item:nth-of-type(2) {
+    background: url(../img/carousel_02.jpg) no-repeat center/cover;
+    height: calc(100vh - 66px);
+}
+#topCarousel .carousel-item:nth-of-type(3) {
+    background: url(../img/carousel_03.jpg) no-repeat center/cover;
+    height: calc(100vh - 66px);
+}
+
+/* 캐러셀 배경 이미지 어둡게 */
+#topCarousel .carousel-item:after {
+    content: '';
+    position: absolute;height: calc(100vh - 66px);
+    width: 100%; height: 100%;
+    background-color: var(--black);
+    opacity: 0.5;
+}
+
+#topCarousel .carousel-caption {
+    position: absolute;
+}
+#topCarousel .carousel-item:nth-of-type(1) .carousel-caption {
+    bottom: -50px;
+}
+#topCarousel .carousel-item:nth-of-type(2) .carousel-caption {
+    bottom: 50px;
+}
+#topCarousel .carousel-item:nth-of-type(3) .carousel-caption {
+    bottom: 20px;
+}
+#topCarousel .carousel-control-prev {
+    left: -200px;
+    transition: left 1s;
+}
+#topCarousel .carousel-control-next {
+    right: -200px;
+    transition: right 1s;
+}
+#topCarousel:hover .carousel-control-prev {left: 0;}
+#topCarousel:hover .carousel-control-next {right: 0;}
+
+/* 화살표에 마우스 호버시 색상 변경 */
+#topCarousel .carousel-control-prev:hover,
+#topCarousel .carousel-control-next:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+/* 선택 슬라이드의 indicator 컬러 변경 */
+#topCarousel .carousel-indicators .active {
+    background-color: var(--gold);
+}
+
+/* nav bar */
+.navbar {font-size: 0.9rem;}
+.navbar .nav-link {
+    padding: 20px 0;
+}
+.navbar-dark .navbar-nav .active>.nav-link, 
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .nav-link.show, 
+.navbar-dark .navbar-nav .show>.nav-link {
+    color:var(--orange)
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color:var(--white)
+}
+
+section#products {
+    padding: 100px 0 80px;
+}
+/* section#secret */
+section#secret {
+    padding: 140px 0 80px;
+    background: url(../img/menu3_about_bg.jpg) no-repeat center / cover fixed;
+}
+
+/* section#cf */
+section#cf {
+    padding: 140px 0 80px;
+    background: url(../img/menu4_background_bg.jpg) no-repeat center / cover fixed;
+}
+
+/* section#garden */
+.card-body .card-text {
+    color: var(--gold)
+}
+.card-body .card-text:before {
+    content: '';
+    background-color: var(--gold);
+    width: 50%; height: 4px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* section#contact */
+section#contact {
+    padding: 140px 0 80px;
+    background: url(../img/menu7_background_bg.jpg) no-repeat center / cover fixed;
+}
+.form-control::placeholder{
+    color:white;
+}
+#inputState option{
+    color:gray;
+}
+.btn-link:hover{
+    text-decoration: none;
+}
+
+
+/* waypoint(wp) - bootstrap의 css 클래스명이 아닌 사용자정의 클래스명임 */
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12, .wp13, .wp14, .wp15, .wp16, .wp17, .wp18 {
+    visibility: hidden;
+}
+.animate__animated{
+    visibility:visible
+}
+
+html body {overflow: hidden;}

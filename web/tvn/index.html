@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tvN 뮤직비디오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tvn_play.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>
+            <a href=""><img src="img/tvN_logo.png" alt="로고"></a>
+        </h1>
+        
+        <div class="main_title">
+            <h2>즐거움에 끝이 없다, <span>tvN</span></h2>
+            <div class="sns">
+                <a href="" class="facebook" target="_blank" title="새 창으로 이동"><img src="img/ico_facebook.png" alt="페이스북"></a>
+                <a href="" class="insta" target="_blank" title="새 창으로 이동"><img src="img/ico_insta.png" alt="인스타"></a>
+                <a href="" class="youtube" target="_blank" title="새 창으로 이동"><img src="img/ico_youtube.png" alt="유튜브"></a>
+            </div>
+        </div>
+        <!-- //main_title -->
+
+        <figure id="vid_wrap">
+            <article>
+              <h3>CRUSH</h3>
+              <video loop muted autoplay>
+                <source src="img/vid/CRUSH_WooAh.mp4" type="video/mp4">
+              </video>
+              <h4>WooAh</h4>
+              <p>
+                우아 우아 우아해<br>
+                우아 우아 우아해<br>
+                우아 우아 우아해<br>
+                우아 우아<br>
+                나른해요 그대 곁에 있을 때<br>
+                콧노랠 부르게 해주네요<br>
+                너무 아름다워 환하게 웃는<br>
+                그 모습은 눈이 부시게<br>
+                맑은 햇살 같아요<br>
+                날 밝혀줘 baby woo<br>
+                I wanna fall in love with you<br>
+                마음 가는 대로 해요 my baby<br>
+                </p>
+            </article>
+            
+            <article>
+              <h3>HONNE</h3>
+              <video loop muted autoplay>
+                <source src="img/vid/HONNE_3am.mp4" type="video/mp4">
+              </video>
+              <h4>3am</h4>
+              <p>
+                It's in the eye of the beholder <br>
+                And it's you I'm looking at <br>
+                Oh your freckles paint a constellation <br>
+                Your whole body is a map<br>
+                But I know where I'm going<br>
+                I have known a long long time<br>
+                And girl you're going with me<br>
+                'Cause tonight girl you're all mine<br>
+                There's no point in trying to hide it
+              </p>
+            </article>
+            
+            <article>
+              <h3>UrbanZakapa</h3>
+              <video loop muted autoplay>
+                <source src="img/vid/UrbanZakapa_IDon'tLoveYou.mp4" type="video/mp4">
+              </video>
+              <h4>I Don't Love You</h4>
+              <p>
+                무슨 말을 할까 <br>
+                어디서부터 어떻게<br>
+                고개만 떨구는 나<br>
+                그런 날 바라보는 너<br>
+                그 어색한 침묵<br>
+                널 사랑하지 않아<br>
+                너도 알고 있겠지만<br>
+                눈물 흘리는 너의 모습에도<br>
+                내 마음 아프지가 않아<br>
+                널 사랑하지 않아<br>
+                다른 이유는 없어<br>
+                미안하다는 말도<br>
+              </p>
+            </article>
+            
+            <article>
+              <h3>YerinBaek</h3>
+              <video loop muted autoplay>
+                <source src="img/vid/YerinBaek_ByeByeMyBlue.mp4" type="video/mp4">
+              </video>
+              <h4>Bye Bye My Blue</h4>
+              <p>
+                난 왜 니가 가진 것들을<br> 
+                부러워하는 걸까<br>
+                감당하지도 못할 것들을<br> 
+                손에 꼭 쥐고서<br>
+                여기서 무얼 얼만큼 더 <br>
+                나아지고픈 걸까<br>
+                너도 똑같은 거 다 아는데 <br>
+                내가 이기적인 걸까<br>
+                많이 가져도 난 <br>
+                아직 너 같진 않아<br>
+                아픈 기억들 위로 <br>
+                매일 혼자 걸어 난<br>
+              </p>
+            </article>
+          </figure>
+
+          <!--    모달(Modal) 상태 콘텐츠-->
+        <figure id="modal">
+            <button class="close_btn">X</button>
+            <div class="vid">
+              <video muted loop>
+                <source src="img/vid/CRUSH_WooAh.mp4" type="video/mp4">
+              </video>
+              <video muted loop>
+                <source src="img/vid/HONNE_3am.mp4" type="video/mp4">
+              </video>
+              <video muted loop>
+                <source src="img/vid/UrbanZakapa_IDon'tLoveYou.mp4" type="video/mp4">
+              </video>
+              <video muted loop>
+                <source src="img/vid/YerinBaek_ByeByeMyBlue.mp4" type="video/mp4">
+              </video>
+            </div>
+          </figure>
+          
+          <footer>
+            <div class="inner">
+              <nav class="fnb">
+                <a href="#">Sitemap</a>
+                <a href="#">Community</a>
+                <a href="#">Contact</a>
+              </nav>
+              <address>
+                Copyright &copy; <a href="./">tvN.</a>
+                All rights Reserved.
+              </address>
+            </div>
+          </footer>
+    </div>
+    <script src="js/tvn_play.js"></script>
+</body>
+</html>

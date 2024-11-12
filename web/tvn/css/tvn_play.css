@@ -1,0 +1,213 @@
+@charset "utf-8";
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+body {
+    font-family: 'GmarketSans', "Pretendard Variable", Pretendard;
+}
+
+.wrap {
+    position: fixed;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: url(../img/bg1.png)no-repeat right bottom / cover;
+}
+h1 {
+    position: absolute;
+    left: 100px; top: 100px;
+    z-index: 3;
+}
+h1 img {
+    display: block;
+    width: 260px;
+    height: auto;
+}
+
+/* main_title */
+.main_title {
+    position: absolute;
+    top: 400px; left: 100px;
+    z-index: 1;
+}
+.main_title h2 {
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.7),
+                0 0 5px rgba(0,0,0,0.3);
+}
+.main_title .sns {
+    margin-top: 30px;
+}
+.main_title .sns a {
+    display: inline-block;
+    width: 50px; height: 50px;
+    margin: 0 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.main_title .sns a img {
+    max-width: 100%;
+}
+.main_title .sns a:hover {
+    opacity: 1;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: rgba(0,0,0,0.7);
+    color: #eee;
+    font-size: medium;
+}
+footer .inner {
+    width: 1000px;
+    margin: auto;
+    height: 100%;
+}
+  
+footer .fnb {
+    float: left;
+}
+  footer .fnb a {
+    display: block;
+    float: left;
+    padding: 0 20px;
+}
+footer .fnb a:first-child,
+footer .fnb a:hover {
+    background: rgba(0, 110, 190, 0.7);
+}
+  
+footer address {
+    float: right;
+}
+footer address a {
+    color: #f00;
+} 
+footer address a:hover {
+    text-decoration: overline gray
+}
+
+/* 동영상 article */
+#vid_wrap {
+    position: fixed;
+    top: 0;
+    width: 100%; height: 100%;
+}
+#vid_wrap article {
+    position: relative;
+    float: right;
+    width: 12.5%;
+    height: 100%;
+    overflow: hidden;
+    background: url(../img/divider.png) no-repeat left center/contain;
+}
+#vid_wrap article h3 {
+    position: absolute;
+    left: 10px; right: 0; top: 300px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    border-left: 5px solid #555;
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+#vid_wrap article h3:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -15px; right: 0; top: 7px;
+    height: 0;
+    background: rgba(0,0,0,0.8);
+    transition: all 0.3s;
+    z-index: -1;
+}
+#vid_wrap article:hover h3 {
+    color: #fff;
+    border-left-color: #F20027;
+}
+#vid_wrap article:hover h3:after {
+    height: 50px;
+    top: -15px;
+}
+#vid_wrap article video {
+    position: absolute;
+    z-index: -2;
+    left: 0; top: 0;
+    height: 100%;
+    display: none;
+}
+#vid_wrap article h4 {
+    position: absolute;
+    right: -250px; bottom: 300px;
+    width: 100%; height: 160px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    font-size: 24px;
+    letter-spacing: -1px;
+    color: #fff;
+    text-align: center;
+}
+#vid_wrap article p {
+    position: absolute;
+    right: -250px; bottom: 50px;
+    width: 100%; height: 300px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+    text-align: right;
+    line-height: 1.6;
+    color: #fff;
+    font-family:"Pretendard Variable", Pretendard;
+}
+
+/*동영상 모달(Modal)*/
+#modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+  }
+  #modal .close_btn {
+    display: block;
+    position: absolute;
+    right: 70px;
+    top: 50px;
+    
+    background: none;
+    color: #ccc;
+    font-size: 100px;
+    cursor: pointer;
+    opacity: 0.5
+  }
+  #modal .close-btn:hover {
+    opacity: 1;
+  }
+  
+  #modal .vid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    width: 400px;
+    height: 710px;
+    margin: auto;
+    
+  }
+  #modal .vid video {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+  #modal {display: none;}
+  #modal .vid video {
+    display: none;
+  }

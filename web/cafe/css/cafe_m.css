@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/* 공통요소 */
+.inner {width: 100%; margin: 0 auto;}
+section + section.inner {
+    background: #fff;
+    margin: 50px auto; 
+    padding: 50px 30px; 
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+section h2 {
+    font-size: 28px;
+}
+section .text strong {
+    font-size: 17px;
+}
+section .text > span {
+    display: none;
+}
+/* mainArea */
+#mainArea {
+    height: 80vh;
+} 
+#mainArea .titleArea {
+    width: 30%;
+    padding: 20px 30px; 
+}
+#mainArea .titleArea .title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+#mainArea .titleArea .text {
+    display: none;
+}
+/* header */
+#mainArea header {
+    height: 80px;
+}
+header .logo {
+    float: none;
+    margin-top: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    /* width: 20%; */
+    /* float 속성을 선언하면 요소가 블록이든 인라인이든 상관없이  display: inline-block처럼 된다.*/
+}
+header .logo > a > span {
+    font-size: 24px;
+    font-weight: 600;
+}
+header .logo span + span {
+    border: none;
+}
+header .gnb {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 80px; left: -130%;
+    height: calc(100vh - 450px);
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+}
+header .gnb ul {
+    flex-direction: column;
+}
+header .gnb > ul > li {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+header .gnb > ul > li a {
+    line-height: 60px;  
+    font-size: 24px;
+}
+.menu_area {
+    position: absolute;
+    top: 15px; left: 10px;
+    display: block;
+    width: 35px;
+}
+.gnb ul .subMenu {
+    display: none;
+}
+.gnb > ul > li:hover .subMenu {
+    display: none;
+}
+/* respons */
+.respons-list {overflow: hidden; margin-top: 40px;}
+.respons-list li {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+}
+.respons-list li:first-child {margin-left: 0;}
+.respons-list li img {
+    width: 15%; 
+    margin: 10px 0 10px 20px;
+}
+.respons-list li p {
+    width: 70%;
+}
+/* community */
+.storeList {overflow: hidden;}
+.storeList > li {
+    float: none; 
+    margin:0 auto 30px;
+    width: 100%;
+    padding: 1.5%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.storeList > li:first-child {margin-left: 0;}
+.storeList > li figure {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.storeList > li figure img {width: 100%;}
+.storeList ul {
+    margin-bottom: 20px;
+}
+.storeList ul li {
+    line-height: 1.7; 
+    padding-left: 20px;
+}
+.storeList ul li:before {
+    content: '';
+    width: 5px; height: 5px;
+    background: #12854a;
+    position: absolute;
+    top: 14px; left: 0;
+}
+.storeList .btnArea {text-align: center; margin-bottom: 30px;}
+.storeList .btnArea > a {
+    padding: 8px 35px;
+    background-color: #493c31;
+    color: #fff;
+    border-radius: 3px;
+}
+.storeList .btnArea > a:hover {
+    background: #DDD7CC;
+    color: #777;
+}
+
+/* footer */
+footer {
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}

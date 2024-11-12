@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간에 따라서 자동으로 바뀌는 이미지</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/timer.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 구름 이미지 -->
+         <img src="img/cloud1.png" alt="구름" class="cloud_1">
+         <img src="img/cloud2.png" alt="구름" class="cloud_2">
+
+         <!-- logo -->
+          <h1><a href="#">THE ONE DAY</a></h1>
+
+          <!-- gnb -->
+           <nav class="gnb">
+            <a href="#" class="on">ABOUT</a>
+            <a href="#">HOW TO</a>
+            <a href="#">PORFOLIO</a>
+            <a href="#">SKILLS</a>
+            <a href="#">CONTACT</a>
+           </nav>
+
+           <!-- SNS -->
+            <div class="sns">
+                <a href="" class="btn_facebook"><span class="blind">페이스북</span></a>
+                <a href="" class="btn_insta"><span class="blind">인스타그램</span></a>
+                <a href="" class="btn_youtube"><span class="blind">유튜브</span></a>
+            </div>
+
+            <div class="main_text">
+                <h2>Time</h2>
+                <blockquote>
+                    나는 오늘 하루를 <br>
+                    나의 특별하면서도 평범한 <br>
+                    마지막날이라고 생각하며<br>
+                    온전하고 즐겁게 <br>
+                    매일을 지내려고 노력한다. <br>
+                    우리는 인생의 하루하루를 <br>
+                    함께 시간 시간여행을 한다. <br>
+                    우리가 할 수 있는 최선은 <br>
+                    이 멋진 여행을 즐기는 것 뿐이다. <br>
+                    <cite>영화 어바웃타임 중에서..</cite>
+                </blockquote>   
+            </div>
+    
+            <!-- 모바일화면(시계) + 구름 -->
+            <figure class="mobile">
+                <div class="screen">
+                    <img src="img/cloud1.png" class="cloud_3" alt="">
+                    <img src="img/cloud2.png" class="cloud_4" alt="">
+    
+                    <p class="time_text">
+                        <span class="hour">00 </span><i> : </i>
+                        <span class="min">00 </span><i> : </i>
+                        <span class="sec">00 </span>
+                    </p>
+                </div>
+            </figure>
+    
+            <ul class="btn_wrap">
+                <li><a href="#">morning</a></li>
+                <li><a href="#">afternoon</a></li>
+                <li><a href="#">evening</a></li>
+                <li><a href="#">night</a></li>
+            </ul>
+    </div>
+    <script src="js/timer.js"></script>
+</body>
+</html>

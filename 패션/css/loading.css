@@ -1,0 +1,42 @@
+#loading {
+    background: rgb(133, 199, 224);
+    background-filter: blur(10px);
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+#loading p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+h1, h2, p {
+    margin-bottom: 1rem;
+}
+h2 {
+    margin-top: 2rem;
+}
+
+/*loading_left,loading_right */
+
+#loading_left,
+#loading_right {
+    background: rgb(61, 173, 158);
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+}
+#loading_left {
+    left: 0;
+    transform-origin: left top;
+}
+#loading_right {
+    right: 0;
+    transform-origin: right top;
+}

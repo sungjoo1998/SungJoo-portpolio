@@ -1,0 +1,172 @@
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit}
+
+body {font-family: 'Spoqa Han Sans Neo', sans-serif;  font-weight: 400; color: #555;}
+
+* {box-sizing: border-box;}
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 400;
+  color: rgba(0,0,0,0.7)
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.container {
+  margin: 0 auto;
+  height: 100vh;
+}
+.container.intro {
+  margin-top: 0;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), transparent), url('https://flexible.img.hani.co.kr/flexible/normal/800/533/imgdb/original/2023/1208/20231208500440.jpg') no-repeat right center/cover;
+}
+.intro h1 {
+  position: absolute;
+  top: 50vh;
+  font-family: 'HSSanTokki20-Regular';
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+}
+.intro .btnStart {
+  width: 200px;
+  height: 50px;
+  background: #4aac7e;
+  color: #ffffff;
+  font-family: 'HSSanTokki20-Regular';
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 250px; left: 50%;
+  transform: translateX(-50%);
+}
+/* header */
+.header {
+  background: black;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+}
+.header nav {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.header a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+.header a:hover {
+  color: #ffd22d
+}
+
+/* container */
+.contentsArea {
+  margin: 30px auto;
+  padding: 0 1.5%;
+}
+.container {
+  margin-top: 50px;
+}
+.container h2 {
+  font-weight: 600;
+  color: #000;
+}
+.imgArea {
+  display: block;
+  margin: 20px auto;
+  padding: 0 3%;
+}
+.imgArea ul {
+  list-style-type: none;
+}
+ul li .imgArea {
+  width: 100%;
+}
+ul li .imgArea img {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+ul li .imgArea .title {
+   font-size: 18px;
+   font-weight: 500;
+   color: #000;
+   margin-bottom: 10px;
+}
+ul li .imgArea .contents {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+ul li .imgArea .text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  background: #4aac7e;
+  color: #fff;
+  border: 1px solid #4aac7e;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+/* list */
+.content {
+  max-width: 80vw;
+  margin: 30px auto;
+}
+.content h1 {
+  font-size: 25px;
+  background: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+.listArea input {
+  width: 75%;
+  height: 50px;
+  border: 1px solid rgba(16, 78, 25, 0.3)
+}
+.listArea button {
+  width: 20%;
+  height: 50px;
+  background: #4aac7e;
+  color: #fff;
+  border: none;
+}
+.todoBoard {
+  margin-top: 50px;
+}
+.todoBoard h2 {
+  font-size: 26px;
+  font-weight: 500;
+}
+.todoBoard > .todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px dotted #c1b2a7;
+}
+.todoBoard > p {
+  font-size: 18px;
+}
+.todoBoard  button {
+  width: 80px;
+  height: 30px;
+  background: #686867;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>기린 이치방</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- loading -->
+    <!-- <div class="loading">
+        <div class="d-flex justify-content-center">
+            <img src="img/loading.gif" alt="loading">
+        </div>
+    </div> -->
+    <!-- //loading -->
+
+    <div class="container-fluid px-0">
+        <header id="top">
+            <!-- carousel -->
+            <div id="topCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#topCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#topCarousel" data-slide-to="1"></li>
+                    <li data-target="#topCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption d-md-block">
+                            <h5>
+                                <img src="img/carousel_01_left.png" alt="오늘을 기린다"
+                                    class="animate__animated animate__fadeInLeftBig">
+                            </h5>
+                            <p>
+                                <img src="img/carousel_01_right.png" alt=""
+                                    class="animate__animated animate__fadeInRightBig">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption d-md-block">
+                            <h5>
+                                <img src="img/carousel_02_left.png" alt="기린 이치방"
+                                    class="animate__animated animate__fadeInLeftBig">
+                            </h5>
+                            <p>
+                                <img src="img/carousel_02_right.png" alt=""
+                                    class="animate__animated animate__fadeInRightBig">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption d-md-block">
+                            <h5>
+                                <img src="img/carousel_03_left.png" alt=""
+                                    class="animate__animated animate__fadeInLeftBig">
+                            </h5>
+                            <p>
+                                <img src="img/carousel_03_right.png" alt=""
+                                    class="animate__animated animate__fadeInRightBig">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" aria-hidden="true" data-target="#topCarousel" data-slide="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" fill="currentColor"
+                        class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223" />
+                    </svg>
+                </a>
+                <span class="sr-only">Previous</span>
+                <a class="carousel-control-next" aria-hidden="true" data-target="#topCarousel" data-slide="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" fill="currentColor"
+                        class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- //topCarousel -->
+        </header>
+
+        <!-- 
+            1) sticky-top: 고정네비게이션바로 스크롤 시 상단에 네비를 고정
+            2) no-gutters: 그리드 시스템에서 열간의 패딩(gutter)을 제거
+               -> 기본적으로 부트스트랩에서는 열사이에 패딩이 적용되어 있으므로 이 값을 제거
+        -->
+        <div class="row bg-black px-0 sticky-top no-gutters">
+            <div class="col pl-5">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+                    <a class="navbar-brand text-hide" href="#">프리미어비어 기린 이치방
+                        <img src="img/logo_md.png" alt="logo" class="img-fluid d-none d-lg-block">
+                        <img src="img/logo-sm.png" alt="logo" class="img-fluid d-lg-none">
+                    </a>
+
+                    <!-- mobile button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link active" href="#top">오늘을 기린다 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link" href="#birth">기린맥주의 탄생</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#secret">진한 맛의 비밀</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#products">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#cf">tv cf</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#garden">프로즌가든</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#contact">contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div><!-- navbar -->
+
+
+        <!-- 두번째 콘텐츠 -->
+        <section id="birth">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <!-- col-md-8.offset-md-2: 화면너비가 중간사이즈 이상일 때 12칸중 8칸을 열로 사용하고 양쪽에 2칸의 여백을 두어서 중앙정렬하는 부트스트랩 그리스 시스템 -->
+                    <div class="col-md-8 offset-md-2 d-flex justify-content-center">
+                        <img src="img/menu2_title.png" alt="100년의 전통이 있는 맥주 기린이치방" class="wp1 img-fluid mx-auto">
+                    </div>
+                </div>
+
+                <div class="row py-5">
+                    <img src="img/menu2_ad.png" alt="기린 이치방" class="wp2 img-fluid">
+                </div>
+
+                <div class="row py-5">
+                    <div class="col-lg-8">
+                        <img src="img/menu2_history.png" alt="" class="wp3 img-fluid mx-auto">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row justify-content-center py-5">
+                            <img src="img/menu2_factory.png" alt="" class="wp4 img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //#birth -->
+
+        <!-- 세번째 콘텐츠 -->
+        <section id="secret">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 wp5">
+                        <div class="row">
+                            <img src="img/menu3_title.png" alt="첫즙만 담았다 진한 맛의 비밀">
+                        </div>
+                        <div class="row text-white">
+                            <small>전 세계 유일, 맥아의 첫 즙만을 사용하는 기린 이치방</small>
+                            <p>기린 이치방 시보리는 첫번째 짜낸 맥즙만을 사용하여 원료 보리 본연의 진한 맛을 충분히 느낄 수 있고, 깔끔한 맛이 특징입니다.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wp6">
+                        <img src="img/menu3_products.png" alt="" class="img-fluid float-right">
+                    </div>
+                </div>
+
+                <!-- 
+            1) 이미지를 가로 기준 센터로 배치
+               - 부모 div.row에 justify-content-center를 선언
+               - 부모 div.row에 자식인 img에 mx-auto를 선언
+            2) 이미지를 우측으로 배치
+               - 부모 div.row에 justify-content-end 선언
+               - 부모 div.row에 자식인 img에 ml-auto를 선언
+            2) 이미지를 세로기준 센터로 배치
+               - 부모 div.row에 align-items-center 선언
+               - 부모 div.row에 자식인 img에 my-auto를 선언
+               - 부모 div.row에 자식인 요소에 align-self-center를 선언            
+            -->
+            </div>
+        </section>
+        <!-- //secret -->
+
+        <section id="products">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <img src="img/menu4_title.png" alt="기린 이치방이 선언하는 최고의 맛" class="wp7 img-fluid mx-auto">
+                </div>
+                <div class="row py-5 wp8">
+                    <div class="col-md-6 small text-center">
+                        <div class="row">
+                            <img src="img/menu4_text1.png" alt="" class="img-fluid mx-auto">
+                        </div>
+                        <small>맥아의 첫즙만을 기린의 프리미엄 맥주</small>
+                        <p>
+                            <strong>-5℃에 얼린 프로즌의 거품</strong>
+                            기린 맥주만의 기술로 만든 팥빙수의 얼음 알갱이같은 차가운 거품
+                        </p>
+                        <p>
+                            <strong>처음 맛보는 식감!</strong>
+                            거품을 한 입 맛보는 순간, 시원하게 느껴지는 얼음 알갱이가 새로운 재미를 줍니다.
+                        </p>
+                        <p>
+                            <strong>맥주의 시원함을 30분동안 유지</strong>
+                            프로즌 상태의 얼린 거품이 마치 뚜껑같은 역할을 하며 탄산이 날아가는 것을 막아주어 마지막 한 모금까지 가장 시원하고 맛있는 온도로 즐길 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="col-md-4 offset-md-2 d-flex">
+                        <div class="row align-self-center mx-auto">
+                            <img src="img/menu4_text1_product.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div><!-- wp8 -->
+                <div class="row py-5 wp9">
+                    <div class="col-md-6 small text-center">
+                        <div class="row">
+                            <img src="img/menu4_text2.png" alt="" class="img-fluid mx-auto align-self-center">
+                        </div>
+                        <small>맥주 특유의 시원함을 어떻게 하면 마지막까지 맛있게 즐길 수 있을지 생각한 끝에 탄생하였습니다.</small>
+                        <p>
+                            <strong>가장 풍미가 좋은 맥아의 첫즙</strong>
+                            맥아의 맥즙을 섞어 만드는 다른 맥주와는 딜리, 이치방 시보리는 맥아의 첫즙만을 사용한 프리미엄 맥주입니다.
+                        </p>
+                        <p>
+                            <strong>깊고 풍부한 맛</strong>
+                            프렌치 프레스로 추출한 커피의 맛처럼 깊고 진한 맥주 본연의 맛을 느낄 수 있습니다.
+                        </p>
+                        <p>
+                            <strong>세계 유일의 프리미엄 맥주를 즐기세요</strong>
+                            전세계에서 유일하게 첫즙을 고집하는 프리미엄 양조 비결로 100년의 전통을 지켜오고 있는 기린 이치방 시보리입니다.
+                        </p>
+                    </div>
+                    <div class="col-md-4 offset-md-2 d-flex">
+                        <div class="row align-self-center mx-auto">
+                            <img src="img/menu4_text2_product.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sectiopn#products -->
+
+        <section id="cf">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <img src="img/menu5_title.png" alt="" class="img-fluid mx-auto">
+                </div>
+                <div class="row wp10">
+                    <div class="col-8 mx-auto">
+                        <div class="embed-responsive embed-responsive-16by9 d-none d-md-block">
+                            <iframe class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/34j-O8jP6GM?loop=1&playlist=34j-O8jP6GM&autoplay=1&mute=1&color=white"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section#cf -->
+
+        <section id="garden" class="py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <img src="img/menu6_title.png" alt="" class="wp11 img-fluid mx-auto">
+                </div>
+
+                <!--모바일 때는 세로 1줄/태블렛일 때는 세로2줄, 노트북이상일 때는 세로 4줄의 반응형 레이아웃 -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="col mb-4 wp15">
+                        <div class="card">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/frozen_garden/menu6_garden01.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden02.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden03.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-target="#carouselExampleControls" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-target="#carouselExampleControls" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div> <!-- carousel -->
+                            <h5 class="card-title bg-warning p-2 text-white small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chat-left-dots-fill m-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                </svg>10 comment
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-camera-fill m-1" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                    <path
+                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" />
+                                </svg>100 shares
+                            </h5>
+                            <div class="card-body">
+                                <h6 class="text-warning">AUGUST 5, 2019 IN SEOUL</h6>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div><!-- card-body -->
+                            <!-- map 넣기 -->
+                            <div id="map" style="width:100%;height:200px;"></div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 wp16">
+                        <div class="card">
+                            <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/frozen_garden/menu6_garden04.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden05.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden06.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-target="#carouselExampleControls2" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-target="#carouselExampleControls2" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div> <!-- carousel -->
+                            <h5 class="card-title bg-warning p-2 text-white small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chat-left-dots-fill m-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                </svg>10 comment
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-camera-fill m-1" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                    <path
+                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" />
+                                </svg>100 shares
+                            </h5>
+                            <div class="card-body">
+                                <h6 class="text-warning">AUGUST 5, 2019 IN SEOUL</h6>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div><!-- card-body -->
+                            <!-- map 넣기 -->
+                            <div id="map" style="width:100%;height:200px;"></div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 wp17">
+                        <div class="card">
+                            <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/frozen_garden/menu6_garden07.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden08.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden09.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-target="#carouselExampleControls3" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-target="#carouselExampleControls3" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div> <!-- carousel -->
+                            <h5 class="card-title bg-warning p-2 text-white small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chat-left-dots-fill m-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                </svg>10 comment
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-camera-fill m-1" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                    <path
+                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" />
+                                </svg>100 shares
+                            </h5>
+                            <div class="card-body">
+                                <h6 class="text-warning">AUGUST 5, 2019 IN SEOUL</h6>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div><!-- card-body -->
+                            <!-- map 넣기 -->
+                            <div id="map" style="width:100%;height:200px;"></div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 wp18">
+                        <div class="card">
+                            <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/frozen_garden/menu6_garden10.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden11.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/frozen_garden/menu6_garden12.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-target="#carouselExampleControls4" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-target="#carouselExampleControls4" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div> <!-- carousel -->
+                            <h5 class="card-title bg-warning p-2 text-white small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chat-left-dots-fill m-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                </svg>10 comment
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-camera-fill m-1" viewBox="0 0 16 16">
+                                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                    <path
+                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" />
+                                </svg>100 shares
+                            </h5>
+                            <div class="card-body">
+                                <h6 class="text-warning">AUGUST 5, 2019 IN SEOUL</h6>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div><!-- card-body -->
+                            <!-- map 넣기 -->
+                            <div id="map" style="width:100%;height:200px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section#garden -->
+
+        <section id="contact" class="mt-5">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <img src="img/menu7_title.png" alt="" class="img-fluid mx-auto">
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5 wp13">
+                        <div class="row text-white">
+                            <p class="mx-auto small">
+                                <small>FAQ 자주 묻는 질문 모음에서 찾아보세요.</small>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <!-- 아코디언 -->
+                            <div class="accordion" id="accordionExample">
+                                <div class="card bg-transparent">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left text-warning text-center"
+                                                type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
+                                                Q. 맥주는 어떻게 마셔야 제일 맛있나요?
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body text-white">
+                                            A.
+                                            첫째, 적당한 온도에 마셔야 합니다.
+                                            맥주는 온도가 높으면 쓴맛이 강하게 느껴지고 너무 차면 거품이 나지 않을 뿐 아니라 참 맛도 느낄 수 없게 됩니다. 맥주를 가장 마시기
+                                            적당한 온도는 여름철 4-8℃, 겨울철 8-12℃로 알려져 있습니다.
+
+                                            둘째, 거품과 함께 단숨에 마셔야 합니다.
+                                            거품은 흔히 맥주의 꽃이라고 합니다. 거품은 맥주 속의 탄산가스가 날아가는 것을 막아주어 맥주의 맛이 오래도록 지속될 수 있게 만드는
+                                            역할을 합니다.
+
+                                            셋째, 맥주컵은 늘 깨끗한 상태를 유지합니다.
+                                            맥주잔에 기름기 등이 남아 있게 되면 풍부한 거품이 잘 나지 않고 쉽게 꺼질 수 있습니다. 깨끗한 상태의 맥주잔을 준비한 후 잔 자체를
+                                            차게 하여 맥주를 따라 드시면 기쁨이 두 배랍니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-transparent">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-link btn-block text-left text-warning collapsed text-center"
+                                                type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Q. 하이트 진로 공장은 어디에 있나요?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body text-white">
+                                            A.<br>
+                                            하이트진로 공장은 전국에 총 6곳이 있으며, 맥주 공장은 강원공장, 전주공장, 마산공장이 있으며, 소주 공장은 이천공장, 청주공장,
+                                            익산공장 이 있습니다.
+                                            <br><br>
+                                            현재 견학 프로그램을 운영중인 공장은 강원공장이며, 신청 전 견학 가능여부를 홈페이지에서 확인 하시기 바랍니다.
+                                            <br><br>
+                                            ▶ [견학문의 맥주 공장] <br>강원공장 : 033-430-8250~3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-transparent">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                            <button
+                                                class="btn btn-link btn-block text-left text-warning collapsed text-center"
+                                                type="button" data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Q. 주류 교환 티켓에 유효기간이 있나요?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body text-white">
+                                            A.<br>
+                                            하이트진로에서 발행한 주류 교환(기증주) 티켓은 유효기간이 없습니다.
+                                            <br><br>
+                                            해당 상품으로의 교환은 티켓 뒷면에 나와 있는 가까운 하이트진로 지점을 참조한 후 방문하여 교환하시면 됩니다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- 아코디언 -->
+                    <div class="col-md-4 offset-md-1 wp14">
+                        <div class="row text-white">
+                            <p class="mx-auto small"><small>기타 문의사항은 고객센터에 문의주세요</small></p>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <!-- form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput" class="sr-only">이름</label>
+                                        <input type="text" class="form-control bg-transparent"
+                                            id="formGroupExampleInput" placeholder="이름">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <label for="formGroupExampleInput" class="sr-only">이메일</label>
+                                            <div class="input-group mb-2 mr-sm-2">
+                                                <input type="text" class="form-control bg-transparent"
+                                                    id="inlineFormInputGroupUsername2" placeholder="이메일">
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text bg-transparent text-white">@</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <label for="inputState" class="sr-only">이메일 선택</label>
+                                            <select class="form-control bg-transparent text-white" id="inputState">
+                                                <option>gmail.com</option>
+                                                <option>daum.net</option>
+                                                <option>naver.com</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput" class="sr-only">제목</label>
+                                        <input type="text" class="form-control bg-transparent"
+                                            id="formGroupExampleInput" placeholder="제목">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput" class="sr-only">문의사항</label>
+                                        <textarea class="form-control bg-transparent" rows="6"
+                                            placeholder="문의사항을 남겨주세요"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-dark bg-black btn-block border-0">전송</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section#contact-->
+
+        <footer id="footer" class="bg-black">
+            <!-- .container>.row*3 -->
+            <div class="container py-5">
+                <div class="row py-3">
+                    <img src="img/footer_logo.png" alt="" class="img-fluid mx-auto">
+                </div>
+                <div class="row py-3">
+                    <div class="col-md-4 text-white text-center">주소 : 서울특별시 강남구 영동대로 714 하이트진로빌딩</div>
+                    <div class="col-md-4 text-white text-center">대표번호 : 080-210-0150</div>
+                    <div class="col-md-4 text-white text-center">하이트진로 홈페이지 :
+                        <a href="https://www.hitejinro.com" class="text-warning">https://www.hitejinro.com</a>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col">
+                        <ul class="list-unstyled d-flex justify-content-center">
+                            <li>
+                                <a href="">
+                                    <i class="fa-xl fa-brands fa-square-instagram fa-beat-fade p-1"
+                                        style="color: #FFD43B;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-xl fa-brands fa-square-twitter fa-beat-fade p-1"
+                                        style="color: #FFD43B;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-xl fa-brands fa-bootstrap fa-beat-fade p-1"
+                                        style="color: #FFD43B;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-xl fa-brands fa-square-facebook fa-beat-fade p-1"
+                                        style="color: #FFD43B;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-xl fa-brands fa-square-youtube fa-beat-fade p-1"
+                                        style="color: #FFD43B;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- bootstrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- animatescroll plugin -->
+    <script src="js/animatescroll.min.js"></script>
+    <!-- waypoint plugin -->
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <!-- <script src="js/script.js"></script> -->
+     <script src="js/script1.js"></script>
+</body>
+
+</html>

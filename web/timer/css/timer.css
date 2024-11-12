@@ -1,0 +1,269 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+body {
+    font-family: 'Noto Serif KR, serif';
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* wrap */
+#wrap {
+    position: fixed;
+    width: 100%; height: 100%;
+    min-width: 960px;
+    min-height: 780px;
+    overflow: hidden;
+    background: url(../img/bg_morning.jpg) no-repeat bottom center/cover;
+    transition: all 1s;
+}
+/* 구름 애니메이션 */
+/* 속성 선택자 - 클래스명이  cloud인 요소만 선택 */
+[class ^= "cloud"] {
+    position: fixed;
+    top: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+/* 
+    transition - 반드시 마우스 이벤트가 있어야함
+    animation - 마우스이벤트와 상관없이 동작이 됨
+*/
+.cloud_1 {
+    left: -100%;
+    animation: cloud1 150s linear infinite; /* 애니메이션이름 실행시간 가속함수(일정 속도) 무한반복 */
+}
+.cloud_2 {
+    left: 0;
+    animation: cloud2 250s linear infinite; /* 애니메이션이름 실행시간 가속함수(일정 속도) 무한반복 */
+}
+@keyframes cloud1 {
+    to {left: 100%}
+}
+@keyframes cloud2 {
+    0% {left: 0}
+    50% {left: 100%;}
+    50.0001% {left: -1840px;}
+    100% {left: 0;}
+}
+
+/* logo */
+h1 {
+    position: absolute;
+    left: 50px; top: 25px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: #000;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+/* gnb */
+.gnb {
+    position: absolute;
+    top: 50px; right: 300px;
+    display: flex;
+    align-items: center;
+}
+.gnb > a {
+    position: relative;
+    padding: 8px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.gnb > a:before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(230, 64, 97, 1);
+    transform: scale(0);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s;
+}
+.gnb > a.on {color: #fff;}
+.gnb > a.on:before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* sns */
+.sns {
+    position: absolute;
+    right: 50px; top: 50px;
+}
+.sns > a {
+    display: inline-block;
+    width: 28px; height: 28px;
+    padding: 5px;
+    margin-left: auto15px;
+    opacity: 0.5;
+    background: no-repeat center/cover;
+}
+.sns > a.btn_facebook {background-image: url(../img/facebook.png);}
+.sns > a.btn_insta {background-image: url(../img/instagram.png);}
+.sns > a.btn_youtube {background-image: url(../img/youtube.png);}
+.sns > a:hover {opacity: 1;}
+
+/* main_text */
+.main_text {
+    position: absolute;
+    left: 50px; top: 50%;
+    transform: translateY(-50%);
+}
+.main_text h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    opacity: 0.8;
+    margin-bottom: 80px;
+    color: #000;
+}
+.main_text blockquote {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: -2px;
+    writing-mode: vertical-rl;
+    background: -webkit-linear-gradient(#4b4844, #af1414);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* btn_wrap */
+.btn_wrap {
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn_wrap li {flex: 1;}
+.btn_wrap li a {
+    display: block;
+    width: calc(100% - 10px);
+    margin: 0 5px;
+    border-radius: 5px;
+    line-height: 2.4;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #111;
+    opacity: 0.7;
+    transition: all 0.3s;
+    background: #fff;
+}
+.btn_wrap li a:hover,
+.btn_wrap li.on a {
+    background: #000;
+    color: #fff;
+    opacity: 1;
+}
+.btn_wrap li.on a {
+    transform: translateY(-15px);
+}
+
+/* 모바일화면(screen) */
+.mobile {
+    position: fixed;
+    top: 200px; right: -150px;
+    width: 1226px;
+    height: 810px;
+    background: url(../img/phone_morning.png) no-repeat 0 0;
+    transition: all 1s;
+}
+.mobile .screen {
+    overflow: hidden;
+    position: absolute;
+    left: 136px; top: 100px;
+    width: 544px; height: 310px;
+    /* padding-left: 80px; */
+    box-sizing: border-box;    
+}
+.mobile .screen .cloud_3 {
+    left: -100%;
+    top: 0;
+    width: 700px;
+    animation: cloud3 150s linear infinite
+}
+.mobile .screen .cloud_4 {
+    top: 100px;
+    left: 0;
+    width: 1200px;
+    animation: cloud4 250s linear infinite
+}
+@keyframes cloud3 {
+    to {left: 100%}    
+}
+@keyframes cloud4 {
+    0% {left: 0}
+    50% {left: 100%}
+    50.0001%{left: -100%}
+    100% {left: 0}    
+}
+
+/* 모바일 시계 */
+.mobile .time_text {
+    font-size: 70px;
+    line-height: 310px;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+    font-family: "Noto Sans Display", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+.mobile .time_text i {
+    font-style: normal;
+    opacity: 0.6;
+    animation: flash 1s steps(2) infinite;
+}
+@keyframes flash {
+    to {opacity: 0.9;}
+}
+
+/* js 테마스타일(클래스) */
+/* morning */
+#wrap.morning {
+    background-image: url(../img/bg_morning.jpg);
+    color: #111
+}
+#wrap.morning .mobile {
+    background-image: url(../img/phone_morning.png);
+}
+
+/* afternoon */
+#wrap.afternoon {
+    background-image: url(../img/bg_afternoon.jpg);
+    color: #111
+}
+#wrap.afternoon .mobile {
+    background-image: url(../img/phone_afternoon.png);
+    color: #111
+}
+
+/* evening */
+#wrap.evening {
+    background-image: url(../img/bg_evening.jpg);
+    color: #111
+}
+#wrap.evening .mobile {
+    background-image: url(../img/phone_evening.png);
+    color: #111
+}
+#wrap.evening .main_text {color: #fff;}
+
+/* night */
+#wrap.night {
+    background-image: url(../img/bg_night.jpg);
+    color: #fff
+}
+#wrap.night .mobile {
+    background-image: url(../img/phone_night.png);
+    color: #fff
+}
+#wrap.night .main_text {color: #fff;}
+#wrap.night .gnb > a {color: #fff;}
